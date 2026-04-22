@@ -1,0 +1,255 @@
+/*DECORAÇÃO DE FUNDO*/
+body {
+    background: linear-gradient(to bottom, #003366, #006994, #00aaff);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px);
+    background-size: 60px 60px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+
+/*PARTE DO MENU*/
+.topo {     /*classe. Ele aplica estilos a qualquer elemento HTML com class="topo".*/
+    display: flex;  /*organiza os elementos em linha (um do lado do outro).*/
+    justify-content: space-between;     /*Coloca espaço entre os itens*/
+    align-items: center;    /*Alinha os itens verticalmente no centro.*/
+    padding: 15px 30px;     /*Cria um espaço interno:*/
+    font-size: 23px;
+    overflow: hidden;   /* importante para o fundo não "vazar" */
+
+    /*FUNDO TRANSPARENTE*/
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    margin-bottom: 60px;
+}
+
+.logo {     /*aplica estilo na area da logo*/
+    display: flex;  /*Deixa os elementos (imagem + texto, por exemplo) lado a lado*/
+    align-items: center;    /*Centraliza verticalmente.*/
+    gap: 10px;   /*Cria um espaço de 10px entre os itens (ex: imagem e texto).*/
+}
+
+.logo img {  /*Aplica estilo somente na imagem dentro da logo.*/
+    width: 60px;  /*Define a largura da imagem (altura se ajusta automaticamente).*/
+    border-radius: 50%;
+}
+
+.logo span {
+    font-weight: 500;
+    font-family: 'DIN Pro', sans-serif;
+    font-size: 22px;
+    color: white;
+}
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: url('fonts/DINPro-Regular.woff2') format('woff2'),
+         url('fonts/DINPro-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: 500;
+    font-family: 'DIN Pro', sans-serif;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.menu a:hover { /*Esse é um efeito ao passar o mouse.*/
+    color: #00e5ff; /*Quando o mouse passa em cima do link, ele muda para azul claro.*/
+    letter-spacing: 1px;
+}
+
+
+/*TEXTOS E IMAGENS, INCLUINDO O TITULO*/
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    animation: flutuar 3s ease-in-out infinite alternate;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    animation: flutuar 3s ease-in-out infinite alternate;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    animation: flutuar 3s ease-in-out infinite alternate;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: #00e5ff;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.frase {
+    text-align: center;
+    margin-bottom: 60px;
+    color: #00e5ff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.apresentação1 {
+    text-align: justify;   /* deixa o texto alinhado dos dois lados */
+    max-width: 900px;      /* limita a largura do texto */
+    margin: 0 auto;        /* centraliza o bloco na página */
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.apresentação2 {
+    text-align: justify;   /* deixa o texto alinhado dos dois lados */
+    max-width: 900px;      /* limita a largura do texto */
+    margin: 0 auto;        /* centraliza o bloco na página */
+    color: white;
+    font-size: 20px;
+    
+}
+
+.apresentação3 {
+    text-align: justify;   /* deixa o texto alinhado dos dois lados */
+    max-width: 900px;      /* limita a largura do texto */
+    margin: 0 auto;        /* centraliza o bloco na página */
+    color: white;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.apresentação4 {
+    text-align: justify;   /* deixa o texto alinhado dos dois lados */
+    max-width: 900px;      /* limita a largura do texto */
+    margin: 0 auto;        /* centraliza o bloco na página */
+    color: white;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.apresentação5 {
+    text-align: justify;   /* deixa o texto alinhado dos dois lados */
+    max-width: 900px;      /* limita a largura do texto */
+    margin: 0 auto;        /* centraliza o bloco na página */
+    color: white;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.apresentação6 {
+    text-align: justify;   /* deixa o texto alinhado dos dois lados */
+    max-width: 900px;      /* limita a largura do texto */
+    margin: 0 auto;        /* centraliza o bloco na página */
+    color: white;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+iframe {
+    display: block;
+    margin: 30px auto;
+}
+
+.imagem1 {
+    width: 700px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.imagem1:hover {
+    transform: scale(1.05);
+}
+
+/*DECORAÇÃO DE FUNDO*/
+
+
+.apresentação1, .apresentação2, .apresentação3, .apresentação4, .apresentação5, .apresentação6{
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+@keyframes flutuar {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+.bolhas {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.bolhas span {
+    position: absolute;
+    bottom: -50px;
+    width: 20px;
+    height: 20px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    animation: subir 10s linear infinite;
+}
+
+.bolhas span:nth-child(1) { left: 10%; width: 15px; height: 15px; animation-duration: 8s; }
+.bolhas span:nth-child(2) { left: 25%; width: 25px; height: 25px; animation-duration: 12s; }
+.bolhas span:nth-child(3) { left: 40%; width: 20px; height: 20px; animation-duration: 9s; }
+.bolhas span:nth-child(4) { left: 55%; width: 18px; height: 18px; animation-duration: 11s; }
+.bolhas span:nth-child(5) { left: 70%; width: 22px; height: 22px; animation-duration: 7s; }
+.bolhas span:nth-child(6) { left: 85%; width: 16px; height: 16px; animation-duration: 10s; }
+.bolhas span:nth-child(7) { left: 95%; width: 24px; height: 24px; animation-duration: 13s; }
+
+@keyframes subir {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
