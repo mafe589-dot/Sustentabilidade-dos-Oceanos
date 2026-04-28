@@ -1,0 +1,120 @@
+body {
+    background: linear-gradient(to bottom, #003366, #006994, #00aaff);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px);
+    background-size: 60px 60px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.apresentacao{     /*classe. Ele aplica estilos a qualquer elemento HTML com class="topo".*/
+    display: flex;  /*organiza os elementos em linha (um do lado do outro).*/
+    justify-content: space-between;     /*Coloca espaço entre os itens*/
+    align-items: center;    /*Alinha os itens verticalmente no centro.*/
+    padding: 15px 30px;     /*Cria um espaço interno:*/
+    font-size: 23px;
+    overflow: hidden;   /* importante para o fundo não "vazar" */
+
+    /*FUNDO TRANSPARENTE*/
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    margin-bottom: 60px;
+    margin-top: 20px;
+    margin: 20px;
+}
+
+.logo {     /*aplica estilo na area da logo*/
+    display: flex;  /*Deixa os elementos (imagem + texto, por exemplo) lado a lado*/
+    align-items: center;    /*Centraliza verticalmente.*/
+    gap: 10px;   /*Cria um espaço de 10px entre os itens (ex: imagem e texto).*/
+}
+
+.logo img{
+    width: 60px;
+    border-radius: 50%;
+}
+
+.logo span{
+    font-weight: 500;
+    font-family: 'DIN Pro', sans-serif;
+    font-size: 22px;
+    color: white;
+}
+
+@keyframes flutuar {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+.redes-sociais a {
+    color:azure;
+    display: inline-block; /* Faz os ícones ficarem lado a lado */
+    margin: 10px; /* Espaço entre cada ícone */
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+.redes-sociais img {
+    width: 50px; /* Largura do ícone */
+    height: 50px; /* Altura do ícone */
+   
+    padding: 10px; /* Espaço interno */
+    border-radius: 5px; /* Deixa as bordas levemente arredondadas */
+    transition: 0.3s; /* Suaviza o efeito ao passar o mouse */
+}
+
+.bolhas {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.bolhas span {
+    position: absolute;
+    bottom: -50px;
+    width: 20px;
+    height: 20px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    animation: subir 10s linear infinite;
+}
+
+.bolhas span:nth-child(1) { left: 10%; width: 15px; height: 15px; animation-duration: 8s; }
+.bolhas span:nth-child(2) { left: 25%; width: 25px; height: 25px; animation-duration: 12s; }
+.bolhas span:nth-child(3) { left: 40%; width: 20px; height: 20px; animation-duration: 9s; }
+.bolhas span:nth-child(4) { left: 55%; width: 18px; height: 18px; animation-duration: 11s; }
+.bolhas span:nth-child(5) { left: 70%; width: 22px; height: 22px; animation-duration: 7s; }
+.bolhas span:nth-child(6) { left: 85%; width: 16px; height: 16px; animation-duration: 10s; }
+.bolhas span:nth-child(7) { left: 95%; width: 24px; height: 24px; animation-duration: 13s; }
+
+@keyframes subir {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
