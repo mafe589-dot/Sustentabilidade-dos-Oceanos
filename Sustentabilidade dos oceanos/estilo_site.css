@@ -1,3 +1,4 @@
+
 /*DECORAÇÃO DE FUNDO*/
 body {
     background: linear-gradient(to bottom, #003366, #006994, #00aaff);
@@ -33,6 +34,8 @@ body::before {
     border: 1px solid rgba(0, 229, 255, 0.3);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     margin-bottom: 60px;
+    margin-top: 20px;
+    margin: 20px;
 }
 
 .logo {     /*aplica estilo na area da logo*/
@@ -190,6 +193,49 @@ iframe {
 
 .imagem1:hover {
     transform: scale(1.05);
+}
+
+
+/*RODAPE*/
+html, body {
+    margin: 0; /* Remove margens automáticas */
+    padding: 0; /* Remove espaços internos */
+    width: 100%;
+    min-height: 100%;
+}
+
+.rodape {
+   background-color: #1c1c1c; /* Fundo escuro */
+    width: 100%; /* Ocupa toda a largura */
+    min-height: 250px; /* Altura mínima do rodapé */
+    padding: 60px 0; /* Espaço interno */
+    text-align: center; /* Centraliza conteúdo */
+    position: relative;
+    z-index: 2;
+    
+    box-sizing: border-box; /* Evita sobras de espaço */
+}
+
+h4 {
+    color: #00aaff; /* Cor azul do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-size: 22px; /* Tamanho da letra */
+}
+
+.redes-sociais a {
+    color:azure;
+    display: inline-block; /* Faz os ícones ficarem lado a lado */
+    margin: 10px; /* Espaço entre cada ícone */
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+.redes-sociais img {
+    width: 50px; /* Largura do ícone */
+    height: 50px; /* Altura do ícone */
+   
+    padding: 10px; /* Espaço interno */
+    border-radius: 5px; /* Deixa as bordas levemente arredondadas */
+    transition: 0.3s; /* Suaviza o efeito ao passar o mouse */
 }
 
 /*DECORAÇÃO DE FUNDO*/
