@@ -1,5 +1,5 @@
+/* DECORAÇÃO DE FUNDO */
 
-/*DECORAÇÃO DE FUNDO*/
 body {
     background: linear-gradient(to bottom, #003366, #006994, #00aaff);
     font-family: 'DM Sans', sans-serif;
@@ -18,17 +18,16 @@ body::before {
     pointer-events: none;
 }
 
+/* MENU / HEADER */
 
-/*PARTE DO MENU*/
-.topo {     /*classe. Ele aplica estilos a qualquer elemento HTML com class="topo".*/
-    display: flex;  /*organiza os elementos em linha (um do lado do outro).*/
-    justify-content: space-between;     /*Coloca espaço entre os itens*/
-    align-items: center;    /*Alinha os itens verticalmente no centro.*/
-    padding: 15px 30px;     /*Cria um espaço interno:*/
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
     font-size: 23px;
-    overflow: hidden;   /* importante para o fundo não "vazar" */
+    overflow: hidden;
 
-    /*FUNDO TRANSPARENTE*/
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(15px);
     border-radius: 20px;
@@ -39,14 +38,14 @@ body::before {
     margin: 20px;
 }
 
-.logo {     /*aplica estilo na area da logo*/
-    display: flex;  /*Deixa os elementos (imagem + texto, por exemplo) lado a lado*/
-    align-items: center;    /*Centraliza verticalmente.*/
-    gap: 10px;   /*Cria um espaço de 10px entre os itens (ex: imagem e texto).*/
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.logo img {  /*Aplica estilo somente na imagem dentro da logo.*/
-    width: 60px;  /*Define a largura da imagem (altura se ajusta automaticamente).*/
+.logo img {
+    width: 60px;
     border-radius: 50%;
 }
 
@@ -67,35 +66,14 @@ body::before {
     transition: 0.3s;
 }
 
-.menu a:hover { /*Esse é um efeito ao passar o mouse.*/
-    color: #00e5ff; /*Quando o mouse passa em cima do link, ele muda para azul claro.*/
+.menu a:hover {
+    color: #00e5ff;
     letter-spacing: 1px;
 }
 
+/* TEXTOS E IMAGENS */
 
-/*TEXTOS E IMAGENS, INCLUINDO O TITULO*/
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-    animation: flutuar 3s ease-in-out infinite alternate;
-    font-family: 'Sora', sans-serif;
-    font-weight: 600;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-    animation: flutuar 3s ease-in-out infinite alternate;
-    font-family: 'Sora', sans-serif;
-    font-weight: 600;
-}
-
-h3 {
+h1, h2, h3 {
     text-align: center;
     margin-bottom: 20px;
     color: white;
@@ -123,58 +101,20 @@ h1::after {
     font-weight: 500;
 }
 
-.apresentação1 {
-    text-align: justify;   /* deixa o texto alinhado dos dois lados */
-    max-width: 900px;      /* limita a largura do texto */
-    margin: 0 auto;        /* centraliza o bloco na página */
+.apresentação1,.apresentação2,.apresentação3,.apresentação4,.apresentação5,.apresentação6 {
+    text-align: justify;
+    max-width: 900px;
+    margin: 0 auto;
     color: white;
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 17px;
 }
 
-.apresentação2 {
-    text-align: justify;   /* deixa o texto alinhado dos dois lados */
-    max-width: 900px;      /* limita a largura do texto */
-    margin: 0 auto;        /* centraliza o bloco na página */
-    color: white;
-    font-size: 20px;
-}
-
-.apresentação3 {
-    text-align: justify;   /* deixa o texto alinhado dos dois lados */
-    max-width: 900px;      /* limita a largura do texto */
-    margin: 0 auto;        /* centraliza o bloco na página */
-    color: white;
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.apresentação4 {
-    text-align: justify;   /* deixa o texto alinhado dos dois lados */
-    max-width: 900px;      /* limita a largura do texto */
-    margin: 0 auto;        /* centraliza o bloco na página */
-    color: white;
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.apresentação5 {
-    text-align: justify;   /* deixa o texto alinhado dos dois lados */
-    max-width: 900px;      /* limita a largura do texto */
-    margin: 0 auto;        /* centraliza o bloco na página */
-    color: white;
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.apresentação6 {
-    text-align: justify;   /* deixa o texto alinhado dos dois lados */
-    max-width: 900px;      /* limita a largura do texto */
-    margin: 0 auto;        /* centraliza o bloco na página */
-    color: white;
-    font-size: 20px;
-    margin-bottom: 30px;
-}
+.apresentação1 { margin-bottom: 20px; } 
+.apresentação2 { margin-bottom: 20px; } 
+.apresentação3 { margin-bottom: 20px; } 
+.apresentação4 { margin-bottom: 20px; } 
+.apresentação5 { margin-bottom: 20px; } 
+.apresentação6 { margin-bottom: 20px; }
 
 iframe {
     display: block;
@@ -193,53 +133,48 @@ iframe {
     transform: scale(1.05);
 }
 
+/* LAYOUT */
 
-/*RODAPE*/
-html, body {
-    margin: 0; /* Remove margens automáticas */
-    padding: 0; /* Remove espaços internos */
+.container {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+}
+
+.conteudo {
+    flex: 2;
+}
+
+.lateral {
+    flex: 1;
+}
+
+.imagem-lateral {
     width: 100%;
-    min-height: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
 }
 
-.rodape {
-   background-color: #1c1c1c; /* Fundo escuro */
-    width: 100%; /* Ocupa toda a largura */
-    min-height: 250px; /* Altura mínima do rodapé */
-    padding: 60px 0; /* Espaço interno */
-    text-align: center; /* Centraliza conteúdo */
+.card-info {
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.container,
+.topo,
+.lateral,
+.conteudo {
     position: relative;
-    z-index: 2;
-    
-    box-sizing: border-box; /* Evita sobras de espaço */
+    z-index: 1;
 }
 
-h4 {
-    color: #00aaff; /* Cor azul do título */
-    margin-bottom: 20px; /* Espaço abaixo do título */
-    font-size: 22px; /* Tamanho da letra */
-}
+/* DECORAÇÕES EXTRAS */
 
-.redes-sociais a {
-    color:azure;
-    display: inline-block; /* Faz os ícones ficarem lado a lado */
-    margin: 10px; /* Espaço entre cada ícone */
-    text-decoration: none; /* Remove sublinhado do link */
-}
-
-.redes-sociais img {
-    width: 50px; /* Largura do ícone */
-    height: 50px; /* Altura do ícone */
-   
-    padding: 10px; /* Espaço interno */
-    border-radius: 5px; /* Deixa as bordas levemente arredondadas */
-    transition: 0.3s; /* Suaviza o efeito ao passar o mouse */
-}
-
-/*DECORAÇÃO DE FUNDO*/
-
-
-.apresentação1, .apresentação2, .apresentação3, .apresentação4, .apresentação5, .apresentação6{
+.apresentação1,.apresentação2,.apresentação3,.apresentação4,.apresentação5,.apresentação6 {
     background: rgba(255,255,255,0.05);
     padding: 20px;
     border-radius: 15px;
@@ -249,13 +184,11 @@ h4 {
 }
 
 @keyframes flutuar {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-5px);
-    }
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
 }
+
+/* BOLHAS */
 
 .bolhas {
     position: fixed;
@@ -265,6 +198,7 @@ h4 {
     height: 100%;
     pointer-events: none;
     overflow: hidden;
+    z-index: 0;
 }
 
 .bolhas span {
@@ -286,48 +220,195 @@ h4 {
 .bolhas span:nth-child(7) { left: 95%; width: 24px; height: 24px; animation-duration: 13s; }
 
 @keyframes subir {
-    0% {
-        transform: translateY(0);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-100vh);
-        opacity: 0;
-    }
+    0% { transform: translateY(0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
 }
 
-.container {
-    display: flex;
-    gap: 30px;
-    padding: 20px;
-}
+/* RODAPÉ BASE */
 
-/* LADO ESQUERDO */
-.conteudo {
-    flex: 2;
-}
-
-/* LADO DIREITO */
-.lateral {
-    flex: 1;
-}
-
-/* IMAGEM DA DIREITA */
-.imagem-lateral {
+html, body {
+    margin: 0;
+    padding: 0;
     width: 100%;
-    border-radius: 15px;
+    min-height: 100%;
+}
+
+.rodape {
+    background-color: #1c1c1c;
+    width: 100%;
+    min-height: 250px;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+h4 {
+    color: #00aaff;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.redes-sociais a {
+    color: azure;
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.redes-sociais img {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* BOTÕES SOCIAIS */
+
+.insta-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #00e5ff, #00aaff);
+    color: #003366;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.insta-box img {
+    width: 30px;
+    height: 30px;
+     object-fit: contain;
+}
+
+.insta-box span {
+    font-size: 14px;
+}
+
+.insta-box:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #00aaff, #00e5ff);
+}
+
+/* RODAPÉ MODERNO */
+
+.rodape {
+    background: linear-gradient(to top, #001f33, #003366);
+    color: white;
+    padding: 50px 20px 20px;
+}
+
+.rodape-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.rodape-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.rodape-col h2 {
+    font-family: 'Sora', sans-serif;
+    margin-bottom: 10px;
+}
+
+.rodape-col h4 {
+    margin-bottom: 15px;
+    color: #00e5ff;
+}
+
+.rodape-col p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.rodape-col a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.rodape-col a:hover {
+    color: #00e5ff;
+    transform: translateX(5px);
+}
+
+/* BOTÕES MELHORADOS */
+
+.insta-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.08);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.insta-box:hover {
+    background: rgba(0,229,255,0.2);
+    transform: scale(1.05);
+}
+
+.insta-box img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+/* DETALHES FINAIS */
+
+.copy {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+.rodape-texto {
+    font-size: 14px;
+    opacity: 0.8;
     margin-bottom: 20px;
 }
 
-/* CARD INFORMATIVO */
-.card-info {
+.linha {
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #00e5ff, transparent);
+    margin: 30px auto;
+}
+
+.copy {
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+.insta-box {
     background: rgba(255,255,255,0.08);
-    padding: 20px;
-    border-radius: 15px;
-    color: white;
+    border: 1px solid rgba(0,229,255,0.3);
     backdrop-filter: blur(10px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.insta-box:hover {
+    box-shadow: 0 0 15px rgba(0,229,255,0.5);
+}
+
+.insta-box img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
 }
