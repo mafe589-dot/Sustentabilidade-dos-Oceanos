@@ -130,7 +130,7 @@ header h1{
 
     border: 1px solid rgba(255,255,255,0.3);
 
-    color: white;
+    color: hsl(240, 97%, 25%);
 
     box-shadow:
     0 0 25px rgba(255,255,255,0.3);
