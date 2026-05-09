@@ -306,12 +306,19 @@ h4 {
 
 .rodape-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 30px;
-    max-width: 1100px;
+    gap: 80px;
+    max-width: 1200px;
     margin: auto;
 }
+
+.rodape-col,
+.questionario {
+    padding: 10px;
+}
+
 
 .rodape-col {
     flex: 1;
@@ -411,4 +418,43 @@ h4 {
     width: 25px;
     height: 25px;
     object-fit: contain;
+}
+
+/* FALE CONOSCO */
+
+.questionario {
+    flex: 1;
+    min-width: 200px;
+}
+
+.questionario h4 {
+    margin-bottom: 15px;
+    color: #00e5ff;
+    font-size: 22px;
+}
+
+.fale-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(0,229,255,0.3);
+    backdrop-filter: blur(10px);
+
+    padding: 12px 20px;
+    border-radius: 12px;
+
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.fale-box:hover {
+    background: rgba(0,229,255,0.2);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0,229,255,0.5);
 }
