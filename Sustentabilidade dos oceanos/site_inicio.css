@@ -1,4 +1,12 @@
-/* DECORAÇÃO DE FUNDO */
+/* ================= DECORAÇÃO DE FUNDO ================= */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
 
 body {
     background: linear-gradient(to bottom, #003366, #006994, #00aaff);
@@ -12,31 +20,43 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px);
+
+    background-image: radial-gradient(
+        circle,
+        rgba(255,255,255,0.15) 2px,
+        transparent 2px
+    );
+
     background-size: 60px 60px;
     opacity: 0.3;
     pointer-events: none;
 }
 
-/* MENU / HEADER */
+
+/* ================= MENU / HEADER ================= */
 
 .topo {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 15px 30px;
+    margin: 20px;
+
     font-size: 23px;
     overflow: hidden;
 
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(15px);
+
     border-radius: 20px;
     border: 1px solid rgba(0, 229, 255, 0.3);
+
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    margin-bottom: 60px;
-    margin-top: 20px;
-    margin: 20px;
 }
+
+
+/* ================= LOGO ================= */
 
 .logo {
     display: flex;
@@ -56,13 +76,19 @@ body::before {
     color: white;
 }
 
+
+/* ================= MENU DE NAVEGAÇÃO ================= */
+
 .menu a {
     color: white;
     text-decoration: none;
+
     margin-left: 15px;
+
     font-weight: 500;
     font-family: 'Sora', sans-serif;
     font-size: 15px;
+
     transition: 0.3s;
 }
 
@@ -71,73 +97,124 @@ body::before {
     letter-spacing: 1px;
 }
 
-/* TEXTOS E IMAGENS */
 
-h1, h2, h3 {
+/* ================= TEXTOS ================= */
+
+h1,
+h2,
+h3 {
     text-align: center;
     margin-bottom: 20px;
+
     color: white;
+
     text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+
     animation: flutuar 3s ease-in-out infinite alternate;
+
     font-family: 'Sora', sans-serif;
     font-weight: 600;
 }
 
 h1::after {
     content: "";
+
     display: block;
+
     width: 120px;
     height: 3px;
+
     background: #00e5ff;
+
     margin: 10px auto;
+
     border-radius: 10px;
 }
 
 .frase {
     text-align: center;
     margin-bottom: 60px;
+
     color: #00e5ff;
+
     font-size: 20px;
     font-weight: 500;
 }
 
-.apresentação1,.apresentação2,.apresentação3,.apresentação4,.apresentação5,.apresentação6 {
+
+/* ================= APRESENTAÇÕES ================= */
+
+.apresentação1,
+.apresentação2,
+.apresentação3,
+.apresentação4,
+.apresentação5,
+.apresentação6 {
     text-align: justify;
+
     max-width: 900px;
     margin: 0 auto;
+
     color: white;
     font-size: 17px;
+
+    background: rgba(255,255,255,0.05);
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+
+    font-family: 'DM Sans', sans-serif;
 }
 
-.apresentação1 { margin-bottom: 20px; } 
-.apresentação2 { margin-bottom: 20px; } 
-.apresentação3 { margin-bottom: 20px; } 
-.apresentação4 { margin-bottom: 20px; } 
-.apresentação5 { margin-bottom: 20px; } 
-.apresentação6 { margin-bottom: 20px; }
+.apresentação1 {
+    margin-bottom: 20px;
+}
+
+.apresentação2 {
+    margin-bottom: 20px;
+}
+
+.apresentação3 {
+    margin-bottom: 20px;
+}
+
+.apresentação4 {
+    margin-bottom: 20px;
+}
+
+.apresentação5 {
+    margin-bottom: 20px;
+}
+
+.apresentação6 {
+    margin-bottom: 20px;
+}
+
+
+/* ================= VÍDEO ================= */
 
 iframe {
     display: block;
+
     margin: 30px auto;
+
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
 }
 
-.imagem1 {
-    width: 700px;
-    display: block;
-    margin: 20px auto;
-    border-radius: 20px;
-    transition: 0.3s;
-}
 
-.imagem1:hover {
-    transform: scale(1.05);
-}
-
-/* LAYOUT */
+/* ================= LAYOUT ================= */
 
 .container {
     display: flex;
     gap: 30px;
+
     padding: 20px;
 }
 
@@ -149,20 +226,36 @@ iframe {
     flex: 1;
 }
 
+
+/* ================= IMAGEM LATERAL ================= */
+
 .imagem-lateral {
     width: 100%;
+
     border-radius: 15px;
+
     margin-bottom: 20px;
 }
 
+
+/* ================= CARD ================= */
+
 .card-info {
     background: rgba(255,255,255,0.08);
+
     padding: 20px;
+
     border-radius: 15px;
+
     color: white;
+
     backdrop-filter: blur(10px);
+
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
+
+
+/* ================= POSICIONAMENTO ================= */
 
 .container,
 .topo,
@@ -172,145 +265,175 @@ iframe {
     z-index: 1;
 }
 
-/* DECORAÇÕES EXTRAS */
 
-.apresentação1,.apresentação2,.apresentação3,.apresentação4,.apresentação5,.apresentação6 {
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    font-family: 'DM Sans', sans-serif;
-}
+/* ================= ANIMAÇÃO DOS TÍTULOS ================= */
 
 @keyframes flutuar {
-    from { transform: translateY(0); }
-    to { transform: translateY(-5px); }
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-5px);
+    }
 }
 
-/* BOLHAS */
+
+/* ================= BOLHAS ================= */
 
 .bolhas {
     position: fixed;
+
     bottom: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     pointer-events: none;
     overflow: hidden;
+
     z-index: 0;
 }
 
 .bolhas span {
     position: absolute;
+
     bottom: -50px;
+
     width: 20px;
     height: 20px;
+
     background: rgba(255,255,255,0.3);
+
     border-radius: 50%;
+
     animation: subir 10s linear infinite;
 }
 
-.bolhas span:nth-child(1) { left: 10%; width: 15px; height: 15px; animation-duration: 8s; }
-.bolhas span:nth-child(2) { left: 25%; width: 25px; height: 25px; animation-duration: 12s; }
-.bolhas span:nth-child(3) { left: 40%; width: 20px; height: 20px; animation-duration: 9s; }
-.bolhas span:nth-child(4) { left: 55%; width: 18px; height: 18px; animation-duration: 11s; }
-.bolhas span:nth-child(5) { left: 70%; width: 22px; height: 22px; animation-duration: 7s; }
-.bolhas span:nth-child(6) { left: 85%; width: 16px; height: 16px; animation-duration: 10s; }
-.bolhas span:nth-child(7) { left: 95%; width: 24px; height: 24px; animation-duration: 13s; }
+.bolhas span:nth-child(1) {
+    left: 10%;
+    width: 15px;
+    height: 15px;
+    animation-duration: 8s;
+}
+
+.bolhas span:nth-child(2) {
+    left: 25%;
+    width: 25px;
+    height: 25px;
+    animation-duration: 12s;
+}
+
+.bolhas span:nth-child(3) {
+    left: 40%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 9s;
+}
+
+.bolhas span:nth-child(4) {
+    left: 55%;
+    width: 18px;
+    height: 18px;
+    animation-duration: 11s;
+}
+
+.bolhas span:nth-child(5) {
+    left: 70%;
+    width: 22px;
+    height: 22px;
+    animation-duration: 7s;
+}
+
+.bolhas span:nth-child(6) {
+    left: 85%;
+    width: 16px;
+    height: 16px;
+    animation-duration: 10s;
+}
+
+.bolhas span:nth-child(7) {
+    left: 95%;
+    width: 24px;
+    height: 24px;
+    animation-duration: 13s;
+}
+
+
+/* ================= ANIMAÇÃO DAS BOLHAS ================= */
 
 @keyframes subir {
-    0% { transform: translateY(0); opacity: 0; }
-    50% { opacity: 1; }
-    100% { transform: translateY(-100vh); opacity: 0; }
+
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
 }
 
-/* RODAPÉ BASE */
 
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100%;
-}
+/* ================= RODAPÉ ================= */
 
 .rodape {
     background-color: #1c1c1c;
+
     width: 100%;
     min-height: 250px;
+
     padding: 60px 0;
+
     text-align: center;
+
     position: relative;
     z-index: 2;
+
     box-sizing: border-box;
 }
 
+
+/* ================= TÍTULOS DO RODAPÉ ================= */
+
 h4 {
     color: #00aaff;
+
     margin-bottom: 20px;
+
     font-size: 22px;
 }
 
-.redes-sociais a {
-    color: azure;
-    display: inline-block;
-    margin: 10px;
-    text-decoration: none;
-}
 
-.redes-sociais img {
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-/* BOTÕES SOCIAIS */
-
-.insta-box {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 20px;
-    border-radius: 30px;
-    background: linear-gradient(45deg, #00e5ff, #00aaff);
-    color: #003366;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.insta-box img {
-    width: 30px;
-    height: 30px;
-     object-fit: contain;
-}
-
-.insta-box span {
-    font-size: 14px;
-}
-
-.insta-box:hover {
-    transform: scale(1.05);
-    background: linear-gradient(45deg, #00aaff, #00e5ff);
-}
-
-/* RODAPÉ MODERNO */
+/* ================= RODAPÉ MODERNO ================= */
 
 .rodape {
     background: linear-gradient(to top, #001f33, #003366);
+
     color: white;
+
     padding: 50px 20px 20px;
 }
 
 .rodape-container {
     display: flex;
+
     justify-content: center;
     align-items: flex-start;
+
     flex-wrap: wrap;
+
     gap: 80px;
+
     max-width: 1200px;
+
     margin: auto;
 }
 
@@ -319,7 +442,6 @@ h4 {
     padding: 10px;
 }
 
-
 .rodape-col {
     flex: 1;
     min-width: 200px;
@@ -327,100 +449,115 @@ h4 {
 
 .rodape-col h2 {
     font-family: 'Sora', sans-serif;
+
     margin-bottom: 10px;
 }
 
 .rodape-col h4 {
     margin-bottom: 15px;
+
     color: #00e5ff;
 }
 
 .rodape-col p {
     font-size: 14px;
+
     opacity: 0.8;
 }
 
 .rodape-col a {
     display: block;
+
     color: white;
     text-decoration: none;
+
     margin-bottom: 8px;
+
     transition: 0.3s;
 }
 
 .rodape-col a:hover {
     color: #00e5ff;
+
     transform: translateX(5px);
 }
 
-/* BOTÕES MELHORADOS */
+
+/* ================= BOTÕES SOCIAIS ================= */
 
 .insta-box {
     display: flex;
     align-items: center;
     gap: 10px;
+
     background: rgba(255,255,255,0.08);
-    padding: 10px;
+
+    border: 1px solid rgba(0,229,255,0.3);
+
+    backdrop-filter: blur(10px);
+
+    padding: 10px 15px;
+
     border-radius: 10px;
-    margin-bottom: 10px;
+
+    color: white;
+    text-decoration: none;
+
     transition: 0.3s;
 }
 
 .insta-box:hover {
     background: rgba(0,229,255,0.2);
+
     transform: scale(1.05);
-}
 
-.insta-box img {
-    width: 25px;
-    height: 25px;
-    object-fit: contain;
-}
-
-/* DETALHES FINAIS */
-
-.copy {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 13px;
-    opacity: 0.6;
-}
-
-.rodape-texto {
-    font-size: 14px;
-    opacity: 0.8;
-    margin-bottom: 20px;
-}
-
-.linha {
-    width: 80%;
-    height: 1px;
-    background: linear-gradient(to right, transparent, #00e5ff, transparent);
-    margin: 30px auto;
-}
-
-.copy {
-    font-size: 13px;
-    opacity: 0.6;
-}
-
-.insta-box {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(0,229,255,0.3);
-    backdrop-filter: blur(10px);
-}
-
-.insta-box:hover {
     box-shadow: 0 0 15px rgba(0,229,255,0.5);
 }
 
 .insta-box img {
     width: 25px;
     height: 25px;
+
     object-fit: contain;
 }
 
-/* FALE CONOSCO */
+
+/* ================= DETALHES FINAIS ================= */
+
+.copy {
+    text-align: center;
+
+    margin-top: 30px;
+
+    font-size: 13px;
+
+    opacity: 0.6;
+}
+
+.rodape-texto {
+    font-size: 14px;
+
+    opacity: 0.8;
+
+    margin-bottom: 20px;
+}
+
+.linha {
+    width: 80%;
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #00e5ff,
+        transparent
+    );
+
+    margin: 30px auto;
+}
+
+
+/* ================= FALE CONOSCO ================= */
 
 .questionario {
     flex: 1;
@@ -429,7 +566,9 @@ h4 {
 
 .questionario h4 {
     margin-bottom: 15px;
+
     color: #00e5ff;
+
     font-size: 22px;
 }
 
@@ -437,17 +576,22 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
+
     gap: 10px;
 
     background: rgba(255,255,255,0.08);
+
     border: 1px solid rgba(0,229,255,0.3);
+
     backdrop-filter: blur(10px);
 
     padding: 12px 20px;
+
     border-radius: 12px;
 
     color: white;
     text-decoration: none;
+
     font-weight: 500;
 
     transition: 0.3s;
@@ -455,6 +599,8 @@ h4 {
 
 .fale-box:hover {
     background: rgba(0,229,255,0.2);
+
     transform: scale(1.05);
+
     box-shadow: 0 0 15px rgba(0,229,255,0.5);
 }
