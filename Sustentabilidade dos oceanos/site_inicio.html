@@ -77,6 +77,22 @@
                 O Dia Mundial dos Oceanos, celebrado em 8 de junho, é uma data dedicada à conscientização sobre a importância dos mares para a vida no planeta. Nesse dia, pessoas ao redor do mundo se unem para refletir sobre os desafios enfrentados pelos oceanos e a necessidade de preservá-los para as futuras gerações.
             </p>
 
+             <!-- SUBTÍTULO -->
+            <h3>A Importância dos Oceanos</h3>
+
+             <!-- TEXTO 7 -->
+            <p class="apresentação7">
+              Os oceanos desempenham um papel fundamental para a vida na Terra. Eles ajudam a regular a temperatura do planeta, produzem grande parte do oxigênio presente na atmosfera e influenciam diretamente o clima em diversas regiões do mundo. Além disso, milhões de pessoas dependem dos mares para alimentação, trabalho e transporte.
+            </p>
+
+            <!-- SUBTÍTULO -->
+            <h3>A Riqueza da Vida Marinha</h3>
+
+             <!-- TEXTO 8 -->
+           <p class="apresentação8">
+              A vida marinha é composta por uma enorme variedade de espécies, desde pequenos organismos microscópicos até grandes baleias. Os oceanos abrigam ecossistemas essenciais para o equilíbrio ambiental, como recifes de corais, manguezais e florestas marinhas, que servem de abrigo para inúmeras formas de vida.
+            </p>
+
             <!-- SUBTÍTULO -->
             <h3>
                 Desafios Enfrentados pelos Oceanos
@@ -97,6 +113,14 @@
                 Além disso, o excesso de dióxido de carbono (CO₂) presente na atmosfera agrava ainda mais esse cenário. Parte desse gás é absorvida pelos oceanos, provocando a chamada acidificação da água. Esse processo prejudica organismos marinhos, principalmente aqueles que possuem estruturas calcárias, como corais e moluscos. Com o tempo, esses impactos podem comprometer toda a cadeia alimentar marinha, afetando não apenas a vida nos oceanos, mas também o equilíbrio ambiental global.
             </p>
 
+            <!-- SUBTÍTULO -->
+            <h3>Como Podemos Ajudar?</h3>
+
+             <!-- TEXTO 9 -->
+           <p class="apresentação9">
+                Pequenas atitudes podem gerar grandes impactos na preservação dos oceanos. Reduzir o uso de plástico, descartar o lixo corretamente, economizar água e apoiar projetos ambientais são ações simples que ajudam a proteger os mares e a vida marinha.
+            </p>
+
         </div>
 
         <!-- ================= LADO DIREITO ================= -->
@@ -106,7 +130,7 @@
             <!-- IMAGEM -->
             <img src="imagem.jpeg.jpeg" alt="oceano" class="imagem-lateral">
 
-            <!-- CARD -->
+            <!-- CARD 1-->
             <div class="card-info">
 
                 <h3>Você sabia?</h3>
@@ -114,7 +138,6 @@
                 <p>
                     Mais de 8 milhões de toneladas de plástico vão para os oceanos todos os anos.
                 </p>
-
             </div>
 
             <!-- VÍDEO -->
@@ -126,6 +149,15 @@
                 allowfullscreen>
             </iframe>
 
+            <!-- CARD 2-->
+            <div class="card-info">
+
+                <h3>Curiosidade</h3>
+    
+                <p>
+                    Cerca de 70% da superfície da Terra é coberta por água.
+                </p>
+            </div>
         </aside>
 
     </main>
@@ -229,6 +261,41 @@
         <span></span>
 
     </div>
+
+    <!-- ================== MASCOTE TARTARUGA ================== -->
+     <div class="mascote-tartaruga">
+        <img src="tartaruga.png.png" alt="Tartaruga" style="width:100px;">
+        <div class="fala"></div>
+    </div>
+
+         <!-- JAVASCRIPT (FUNCIONALIDADE DO MASCOTE)-->
+
+   <script>
+
+        const tartaruga = document.querySelector(".mascote-tartaruga");
+        const fala = document.querySelector(".mascote-tartaruga .fala");
+
+        // frases da tartaruga
+        const frases = [
+        "Oi! Vamos cuidar dos oceanos",
+        "Você sabia? O mar produz muito do nosso oxigênio!",
+        "Não jogue lixo no mar!",
+        "Pequenas ações salvam a vida marinha",
+        "Eu adoro nadar em águas limpas!",
+        "Proteja os corais! Eles são essenciais"];
+
+    tartaruga.addEventListener("click", () => {
+
+       // escolhe frase aleatória
+       const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
+
+       fala.textContent = fraseAleatoria;
+       fala.style.display = "block";
+
+       setTimeout(() => {
+       fala.style.display = "none";}, 3000);});
+       
+   </script>
 
 </body>
 </html>
