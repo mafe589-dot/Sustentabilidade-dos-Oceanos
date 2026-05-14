@@ -149,7 +149,10 @@ h1::after {
 .apresentação3,
 .apresentação4,
 .apresentação5,
-.apresentação6 {
+.apresentação6,
+.apresentação7,
+.apresentação8,
+.apresentação9 {
     text-align: justify;
 
     max-width: 900px;
@@ -195,6 +198,17 @@ h1::after {
     margin-bottom: 20px;
 }
 
+.apresentação7 {
+    margin-bottom: 20px;
+}
+
+.apresentação8 {
+    margin-bottom: 20px;
+}
+
+.apresentação9 {
+    margin-bottom: 20px;
+}
 
 /* ================= VÍDEO ================= */
 
@@ -603,4 +617,90 @@ h4 {
     transform: scale(1.05);
 
     box-shadow: 0 0 15px rgba(0,229,255,0.5);
+}
+
+/* MASCOTE TARTARUGA */
+.mascote-tartaruga {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    z-index: 999;
+    cursor: pointer;
+    animation: flutuarTartaruga 3s ease-in-out infinite;
+}
+
+.mascote-tartaruga img {
+    width: 100%;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3));
+}
+
+/* BALÃO DE FALA */
+
+.mascote-tartaruga .fala {
+    position: absolute;
+    bottom: 120px;
+    right: 20px;
+
+    width: 220px;
+
+    padding: 14px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+
+    color: white;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    display: none;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+
+    animation: aparecerFala 0.4s ease;
+}
+
+/* pontinha do balão */
+.mascote-tartaruga .fala::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -10px;
+    right: 25px;
+
+    width: 20px;
+    height: 20px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    transform: rotate(45deg);
+
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* animação */
+@keyframes aparecerFala {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* animação de flutuar */
+@keyframes flutuarTartaruga {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
