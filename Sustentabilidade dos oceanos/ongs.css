@@ -1,0 +1,100 @@
+/* Configuração geral */
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e6f7ff;
+    color: #033;
+}
+
+/* Cabeçalho */
+header{
+    background-color: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Menu */
+.menu{
+    background-color: #023e8a;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+.menu a:hover{
+    color: #90e0ef;
+}
+
+/* Área das ONGs */
+.container-ongs{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+/* Cards */
+.card-ong{
+    background-color: white;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card-ong:hover{
+    transform: scale(1.03);
+}
+
+/* Imagens */
+.card-ong img{
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-top: 15px;
+}
+
+/* Título */
+.card-ong h2{
+    color: #0077b6;
+    margin-top: 15px;
+}
+
+/* Texto */
+.card-ong p{
+    padding: 15px;
+    text-align: justify;
+}
+
+/* Botão */
+.card-ong a{
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #0077b6;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.card-ong a:hover{
+    background-color: #0096c7;
+}
+
+/* Rodapé */
+footer{
+    background-color: #023e8a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
