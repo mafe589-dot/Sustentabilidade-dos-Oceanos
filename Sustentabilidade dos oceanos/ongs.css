@@ -14,23 +14,70 @@ header{
     padding: 30px;
 }
 
-/* Menu */
-.menu{
-    background-color: #023e8a;
-    padding: 15px;
-    text-align: center;
+/* ================= MENU / HEADER ================= */
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 30px;
+    margin: 20px;
+
+    font-size: 23px;
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+
+    border-radius: 20px;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-.menu a{
+
+/* ================= LOGO ================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.logo span {
+    font-weight: 500;
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    color: white;
+}
+
+
+/* ================= MENU DE NAVEGAÇÃO ================= */
+
+.menu a {
     color: white;
     text-decoration: none;
-    margin: 15px;
-    font-weight: bold;
+
+    margin-left: 15px;
+
+    font-weight: 500;
+    font-family: 'Sora', sans-serif;
+    font-size: 15px;
+
+    transition: 0.3s;
 }
 
-.menu a:hover{
-    color: #90e0ef;
+.menu a:hover {
+    color: #00e5ff;
+    letter-spacing: 1px;
 }
+
 
 /* Área das ONGs */
 .container-ongs{
@@ -91,10 +138,224 @@ header{
     background-color: #0096c7;
 }
 
-/* Rodapé */
-footer{
-    background-color: #023e8a;
-    color: white;
+/* ================= RODAPÉ ================= */
+
+.rodape {
+    background-color: #1c1c1c;
+
+    width: 100%;
+    min-height: 250px;
+
+    padding: 60px 0;
+
     text-align: center;
-    padding: 15px;
+
+    position: relative;
+    z-index: 2;
+
+    box-sizing: border-box;
+}
+
+
+/* ================= TÍTULOS DO RODAPÉ ================= */
+
+h4 {
+    color: #00aaff;
+
+    margin-bottom: 20px;
+
+    font-size: 22px;
+}
+
+
+/* ================= RODAPÉ MODERNO ================= */
+
+.rodape {
+    background: linear-gradient(to top, #001f33, #003366);
+
+    color: white;
+
+    padding: 50px 20px 20px;
+}
+
+.rodape-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+
+    gap: 80px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.rodape-col,
+.questionario {
+    padding: 10px;
+}
+
+.rodape-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.rodape-col h2 {
+    font-family: 'Sora', sans-serif;
+
+    margin-bottom: 10px;
+}
+
+.rodape-col h4 {
+    margin-bottom: 15px;
+
+    color: #00e5ff;
+}
+
+.rodape-col p {
+    font-size: 14px;
+
+    opacity: 0.8;
+}
+
+.rodape-col a {
+    display: block;
+
+    color: white;
+    text-decoration: none;
+
+    margin-bottom: 8px;
+
+    transition: 0.3s;
+}
+
+.rodape-col a:hover {
+    color: #00e5ff;
+
+    transform: translateX(5px);
+}
+
+
+/* ================= BOTÕES SOCIAIS ================= */
+
+.insta-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(0,229,255,0.3);
+
+    backdrop-filter: blur(10px);
+
+    padding: 10px 15px;
+
+    border-radius: 10px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.insta-box:hover {
+    background: rgba(0,229,255,0.2);
+
+    transform: scale(1.05);
+
+    box-shadow: 0 0 15px rgba(0,229,255,0.5);
+}
+
+.insta-box img {
+    width: 25px;
+    height: 25px;
+
+    object-fit: contain;
+}
+
+/* ================= DETALHES FINAIS ================= */
+
+.copy {
+    text-align: center;
+
+    margin-top: 30px;
+
+    font-size: 13px;
+
+    opacity: 0.6;
+}
+
+.rodape-texto {
+    font-size: 14px;
+
+    opacity: 0.8;
+
+    margin-bottom: 20px;
+}
+
+.linha {
+    width: 80%;
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #00e5ff,
+        transparent
+    );
+
+    margin: 30px auto;
+}
+
+
+/* ================= FALE CONOSCO ================= */
+
+.questionario {
+    flex: 1;
+    min-width: 200px;
+}
+
+.questionario h4 {
+    margin-bottom: 15px;
+
+    color: #00e5ff;
+
+    font-size: 22px;
+}
+
+.fale-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(0,229,255,0.3);
+
+    backdrop-filter: blur(10px);
+
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    color: white;
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.fale-box:hover {
+    background: rgba(0,229,255,0.2);
+
+    transform: scale(1.05);
+
+    box-shadow: 0 0 15px rgba(0,229,255,0.5);
 }
