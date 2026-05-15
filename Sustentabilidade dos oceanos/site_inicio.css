@@ -155,59 +155,61 @@ h1::after {
 .apresentação9 {
     text-align: justify;
 
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 900px; /*Define a largura máxima do elemento*/
 
-    color: white;
-    font-size: 17px;
+    margin: 0 auto; /*deixa caixas no centro da página.*/
 
-    background: rgba(255,255,255,0.05);
+    color: rgb(255, 255, 255); /*cor do texto*/
 
-    padding: 20px;
+    font-size: 17px; /*Define o tamanho da letra.*/
 
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.089); /*Define a cor das caixas de fundo*/
 
-    backdrop-filter: blur(10px);
+    padding: 20px; /*Distância entre o conteúdo e a borda da caixa*/
 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border-radius: 15px; /*Arredonda as bordas.*/
 
-    font-family: 'DM Sans', sans-serif;
+    backdrop-filter: blur(10px); /*Aplica desfoque no fundo atrás do elemento.*/
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /*Cria sombra na caixa.*/
+
+    font-family: 'DM Sans', sans-serif; /*Define a fonte do texto.*/
 }
 
 .apresentação1 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
 }
 
 .apresentação2 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
 }
 
 .apresentação3 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
 }
 
 .apresentação4 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
 }
 
 .apresentação5 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
 }
 
 .apresentação6 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
 }
 
 .apresentação7 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
 }
 
 .apresentação8 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
 }
 
 .apresentação9 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
 }
 
 /* ================= VÍDEO ================= */
@@ -226,10 +228,9 @@ iframe {
 /* ================= LAYOUT ================= */
 
 .container {
-    display: flex;
-    gap: 30px;
-
-    padding: 20px;
+    display: flex; /*Ativa o Flexbox, um sistema de organização de elementos. Por padrão, os itens ficam lado a lado.*/
+    gap: 30px; /*Cria espaço ENTRE os itens do flex.*/
+    padding: 20px; /*Afastando o conteúdo das bordas.*/
 }
 
 .conteudo {
@@ -243,7 +244,7 @@ iframe {
 
 /* ================= IMAGEM LATERAL ================= */
 
-.imagem-lateral {
+.imagem-lateral1 {
     width: 100%;
 
     border-radius: 15px;
@@ -251,6 +252,14 @@ iframe {
     margin-bottom: 20px;
 }
 
+
+.imagem-lateral2 {
+    width: 100%;
+
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+}
 
 /* ================= CARD ================= */
 
@@ -266,6 +275,8 @@ iframe {
     backdrop-filter: blur(10px);
 
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+
+    margin-bottom: 22px;
 }
 
 
