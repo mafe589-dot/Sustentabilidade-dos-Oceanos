@@ -10,7 +10,7 @@
     margin: 20px;
 
     font-size: 23px;
-    overflow: hidden;
+    overflow: visible;
 
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(15px);
@@ -224,6 +224,8 @@ header h1 {
     line-height: 1.8;
 
     margin-bottom: 15px;
+
+    word-wrap: break-word;
 }
 
 /* BOLHAS */
@@ -339,7 +341,8 @@ header h1 {
 
 /* ================= RODAPÉ ================= */
 
-.rodape {
+ .rodape{
+    margin-top: 300px;
     background-color: #1c1c1c;
 
     width: 100%;
