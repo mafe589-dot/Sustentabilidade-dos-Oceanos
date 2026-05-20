@@ -444,29 +444,6 @@ select option {
     }
 }
 
-
-/* ================= MENSAGENS DE ERRO ================= */
-
-.erro-mensagem {
-    display: none;
-
-    margin: 5px 0 15px 0;
-
-    padding: 8px 12px;
-
-    border-radius: 8px;
-
-    border-left: 4px solid #e74c3c;
-
-    background: rgba(231, 76, 60, 0.1);
-
-    color: #e74c3c;
-
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-
 /* ================= FOOTER DO FORM ================= */
 
 .footer-form {
@@ -773,3 +750,22 @@ button:hover {
         opacity: 0.5;
     }
 }
+
+.erro-mensagem {
+    display: none;
+    background-color: #ffe6e6;    
+    color: #ff3333;             
+    border: 1px solid #ffb3b3;   
+    border-radius: 6px;           
+    padding: 8px 12px;           
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-top: 8px;              
+    margin-bottom: 12px;          
+}
+
+.erro-mensagem:not(:empty) {
+    display: block;
+}
+
+
