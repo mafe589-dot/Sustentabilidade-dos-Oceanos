@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azul Consciente - Formulário</title>
 
-    <link rel="stylesheet" href="questionario.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo.jpeg" type="image/png">
 </head>
 
@@ -183,7 +183,109 @@
 
 <!-- ============================== JAVASCRIPT ============================== -->
 <script>
-// (SEU JS MANTIDO IGUAL)
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("🌊 Sistema carregado (versão produção)");
+
+    const form = document.getElementById("oceanForm");
+    const nome = document.getElementById("nome");
+    const email = document.getElementById("email");
+    const educacao = document.getElementById("educacao");
+    const multiplicador = document.getElementById("multiplicador");
+    const opiniao = document.getElementById("opiniao");
+    const mensagemSucesso = document.getElementById("mensagemSucesso");
+
+    // ============================== VALIDAÇÃO AUTOMÁTICA EM TEMPO REAL ==============================
+
+    // Valida o nome caractere por caractere conforme digita
+    nome.addEventListener("input", function() {
+        const erro = document.getElementById("nomeErro");
+        if (nome.value.trim().length > 0 && nome.value.trim().length < 3) {
+            erro.textContent = "O nome precisa ter mais do que 2 caracteres.";
+        } else {
+            erro.textContent = ""; // Some automaticamente quando passa de 2 letras
+        }
+    });
+
+    // Valida o e-mail conforme digita
+    email.addEventListener("input", function() {
+        const erro = document.getElementById("emailErro");
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (email.value.trim().length > 0 && !regexEmail.test(email.value.trim())) {
+            erro.textContent = "Por favor, insira um e-mail válido.";
+        } else {
+            erro.textContent = ""; // Some automaticamente quando o formato fica correto
+        }
+    });
+
+    // Valida a caixa de texto do animal marinho conforme digita
+    opiniao.addEventListener("input", function() {
+        const erro = document.getElementById("opiniaoErro");
+        if (opiniao.value.trim().length > 0 && opiniao.value.trim().length < 10) {
+            erro.textContent = "Conte-nos mais! Escreva pelo menos 10 letras.";
+        } else {
+            erro.textContent = ""; // Some automaticamente ao atingir 10 letras
+        }
+    });
+
+    // Valida as seleções assim que o usuário escolhe uma opção
+    educacao.addEventListener("change", function() {
+        document.getElementById("educacaoErro").textContent = educacao.value === "" ? "Selecione uma opção." : "";
+    });
+
+    multiplicador.addEventListener("change", function() {
+        document.getElementById("multiplicadorErro").textContent = multiplicador.value === "" ? "Escolha uma resposta." : "";
+    });
+
+    // Valida os botões de rádio assim que clica
+    document.querySelectorAll('input[name="exp_aprendizado"]').forEach(radio => {
+        radio.addEventListener("change", function() {
+            document.getElementById("radioErro").textContent = "";
+        });
+    });
+
+
+    // ============================== VALIDAÇÃO FINAL AO ENVIAR ==============================
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        let valido = true;
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Força a exibição dos erros caso o usuário tente enviar com campos vazios
+        if (nome.value.trim().length < 3) {
+            document.getElementById("nomeErro").textContent = "O nome precisa ter mais do que 2 caracteres.";
+            valido = false;
+        }
+        if (!regexEmail.test(email.value.trim())) {
+            document.getElementById("emailErro").textContent = "Por favor, insira um e-mail válido.";
+            valido = false;
+        }
+        if (educacao.value === "") {
+            document.getElementById("educacaoErro").textContent = "Selecione uma opção de descoberta.";
+            valido = false;
+        }
+        if (!document.querySelector('input[name="exp_aprendizado"]:checked')) {
+            document.getElementById("radioErro").textContent = "Por favor, avalie sua experiência.";
+            valido = false;
+        }
+        if (multiplicador.value === "") {
+            document.getElementById("multiplicadorErro").textContent = "Escolha uma resposta.";
+            valido = false;
+        }
+        if (opiniao.value.trim().length < 10) {
+            document.getElementById("opiniaoErro").textContent = "Conte-nos mais! Escreva pelo menos 10 letras.";
+            valido = false;
+        }
+
+        if (valido) {
+            mensagemSucesso.textContent = "🐋 Obrigado por seu mergulho! Respostas enviadas com sucesso.";
+            mensagemSucesso.style.display = "block";
+            form.reset();
+        }
+    });
+});
+
 </script>
 
 </body>
