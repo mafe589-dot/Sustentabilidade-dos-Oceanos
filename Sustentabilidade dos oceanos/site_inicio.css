@@ -152,7 +152,8 @@ h1::after {
 .apresentação6,
 .apresentação7,
 .apresentação8,
-.apresentação9 {
+.apresentação9,
+.apresentação10 {
     text-align: justify;
 
     max-width: 900px; /*Define a largura máxima do elemento*/
@@ -209,6 +210,9 @@ h1::after {
 }
 
 .apresentação9 {
+    margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
+}
+.apresentação10 {
     margin-bottom: 20px; /*Adiciona uma margem na parte de baixo do elemento.*/
 }
 
