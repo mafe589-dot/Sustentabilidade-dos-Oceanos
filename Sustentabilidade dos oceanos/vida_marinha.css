@@ -1,4 +1,3 @@
-
 /* ================= MENU / HEADER ================= */
 
 .topo {
@@ -19,8 +18,8 @@
     border: 1px solid rgba(0, 229, 255, 0.3);
 
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    top: 1px;
 }
-
 
 /* ================= LOGO ================= */
 
@@ -41,7 +40,6 @@
     font-size: 22px;
     color: white;
 }
-
 
 /* ================= MENU DE NAVEGAÇÃO ================= */
 
@@ -65,7 +63,6 @@
 
 /*========================================================================*/
 
-
 /* RESET */
 *{
     margin: 0;
@@ -76,75 +73,73 @@
 /* BODY */
 body{
     min-height: 100vh;
+
     overflow-x: hidden;
 
     font-family: Arial, Helvetica, sans-serif;
 
     background: linear-gradient(
         to bottom,
-        #46bfff,
-        #8ce4ff,
-        #dff9ff
+        #216183,
+        #2f7f97,
+        #57b2c7
     );
-
-    position: relative;
-}
-
-/* FUNDO */
-.background{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-
-    background:
-    radial-gradient(circle at top left,
-    rgba(255,255,255,0.5),
-    transparent 30%),
-
-    radial-gradient(circle at bottom right,
-    rgba(255,255,255,0.4),
-    transparent 30%);
-
-    z-index: -1;
 }
 
 /* TÍTULO */
-header {
+header{
     text-align: center;
-    padding-top: 25px;
+
+    position: relative;
+
+   
+    margin-bottom: 120px;
 }
 
 header h1 {
-    font-size: 90px;
+    
+    font-size: 40px;
 
     color: white;
 
-    text-shadow:
-    0 0 20px rgba(255,255,255,0.9);
+    animation: flutuar 3s ease-in-out infinite alternate;
 
-    letter-spacing: 3px;
+    font-family: 'Sora', sans-serif;
+    
+    text-shadow: 2px 2px 5px rgb(8, 17, 94);
+
 }
 
-/* CARDS */
+/* ================= CARDS ================= !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.hero{
+    position: relative;
+
+    width: 100%;
+    left: 1500;
+
+}
+
 .card{
-    
+
+    position: absolute;
+
     overflow: hidden;
 
     border-radius: 30px;
 
-    box-shadow:
-    0 0 25px rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px); /*Aplica desfoque no fundo atrás do elemento.*/
 
-    border: 2px solid rgba(255,255,255,0.4);
-
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /*Cria sombra na caixa.*/
+   
     transition: 0.5s;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.05);
 }
 
-.card img{
+.card img {
     width: 100%;
     height: 100%;
 
@@ -152,15 +147,14 @@ header h1 {
 }
 
 /* POSIÇÕES */
-.card1{
+.card1 {
     width: 260px;
-    height: 340px;
+    height: 370px;
 
-    position: absolute;
-    right: 20px;
+    left: 80px;
 }
 
-.card2{
+.card2 {
     width: 220px;
     height: 280px;
 
@@ -168,7 +162,7 @@ header h1 {
     right: 80px;
 }
 
-.card3{
+.card3 {
     width: 300px;
     height: 200px;
 
@@ -176,21 +170,25 @@ header h1 {
     right: 100px;
 }
 
-.card4{
+.card4 {
     width: 220px;
     height: 230px;
+    top: 420px;
+     left: 40px;
 }
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 /* CAIXA DE TEXTO */
-.text-box{
+.text-box {
+
     width: 500px;
 
-    position: absolute;
+    position: relative;
 
-    top: 260px;
-    left: 50%;
+    margin-top: -20px;
 
-    transform: translateX(-50%);
+    margin-left: auto;
+    margin-right: auto;
 
     padding: 30px;
 
@@ -200,25 +198,24 @@ header h1 {
 
     backdrop-filter: blur(15px);
 
-    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px); /*Aplica desfoque no fundo atrás do elemento.*/
 
-    color: hsl(240, 97%, 25%);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /*Cria sombra na caixa.*/
 
-    box-shadow:
-    0 0 25px rgba(255,255,255,0.3);
+    color: hwb(0 98% 2%);
+
+     margin-bottom: 70px;
 }
-
 /* TEXTOS */
-.text-box h2{
+.text-box h2 {
     font-size: 40px;
 
     margin-bottom: 15px;
 
-    text-shadow:
-    0 0 10px rgba(255,255,255,0.7);
+
 }
 
-.text-box p{
+.text-box p {
     font-size: 18px;
 
     line-height: 1.8;
@@ -228,9 +225,14 @@ header h1 {
     word-wrap: break-word;
 }
 
-/* BOLHAS */
-.bubble{
+
+
+/* BOLHAS  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+.bubble {
+
     position: absolute;
+
+    z-index: -1;
 
     border-radius: 50%;
 
@@ -241,8 +243,8 @@ header h1 {
     backdrop-filter: blur(10px);
 
     box-shadow:
-    inset 0 0 20px rgba(255,255,255,0.8),
-    0 0 20px rgba(255,255,255,0.6);
+        inset 0 0 20px rgba(255,255,255,0.8),
+        0 0 20px rgba(255,255,255,0.6);
 
     opacity: 0.7;
 
@@ -250,7 +252,7 @@ header h1 {
 }
 
 /* TAMANHOS */
-.bubble1{
+.bubble1 {
     width: 140px;
     height: 140px;
 
@@ -258,7 +260,7 @@ header h1 {
     left: 100px;
 }
 
-.bubble2{
+.bubble2 {
     width: 170px;
     height: 170px;
 
@@ -268,7 +270,7 @@ header h1 {
     animation-delay: 2s;
 }
 
-.bubble3{
+.bubble3 {
     width: 80px;
     height: 80px;
 
@@ -278,7 +280,7 @@ header h1 {
     animation-delay: 1s;
 }
 
-.bubble4{
+.bubble4 {
     width: 60px;
     height: 60px;
 
@@ -288,30 +290,26 @@ header h1 {
     animation-delay: 3s;
 }
 
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+
+
 /* ANIMAÇÃO */
-@keyframes float{
-
-    0%{
-        transform: translateY(0px);
-    }
-
-    50%{
-        transform: translateY(-20px);
-    }
-
-    100%{
-        transform: translateY(0px);
-    }
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
 }
 
 /* RESPONSIVO */
-@media(max-width: 1000px){
+@media(max-width: 1000px) {
 
-    header h1{
+    header h1 {
         font-size: 55px;
     }
 
-    .text-box{
+    .text-box {
         width: 90%;
 
         position: relative;
@@ -325,7 +323,7 @@ header h1 {
         margin-top: 40px;
     }
 
-    .card{
+    .card {
         position: relative;
 
         margin: auto;
@@ -337,12 +335,207 @@ header h1 {
     }
 }
 
-/*========================================================================*/
+/*=======================================================================*/
 
-/* ================= RODAPÉ ================= */
+/* IMAGENS */
 
- .rodape{
+.imagem-lateral1,
+.imagem-lateral2,
+.imagem-lateral3 {
+    width: 300px;
+    height: auto;
+
+    border-radius: 15px;
+
+    margin-bottom: 70px;
+
+    float: left;
+
+    margin-right: 20px;
+
+    margin-top: 30px;
+}
+
+/* SOBRE OS ANIMAIS */
+
+.titulo {
+    margin-top: 120px;
+    text-align: center;
+    margin-bottom: 20px;
+
+    color: white;
+
+    text-shadow: 2px 2px 5px rgb(8, 17, 94);
+
+    animation: flutuar 3s ease-in-out infinite alternate;
+
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+/* APRESENTAÇÕES */
+
+.mini-introdução,
+.apresentação1,
+.apresentação2,
+.apresentação3,
+.apresentação4,
+.apresentação5 {
+    text-align: justify;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    color: rgb(234, 234, 243);
+
+    font-size: 18px;
+
+    background: rgba(255, 255, 255, 0.089);
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+
+    font-family: 'DM Sans', sans-serif;
+}
+
+.mini-introdução {
+    margin-bottom: 30px;
+}
+
+.apresentação1,
+.apresentação2,
+.apresentação3,
+.apresentação4 {
+    margin-bottom: 30px;
+}
+
+.apresentação5 {
+    margin-bottom: 10px;
+}
+
+
+/* ================= BOLHAS ================= */
+
+.bolhas {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+.bolhas span {
+    position: absolute;
+
+    bottom: -50px;
+
+    width: 20px;
+    height: 20px;
+
+    background: rgba(255,255,255,0.3);
+
+    border-radius: 50%;
+
+    animation: subir 10s linear infinite;
+}
+
+.bolhas span:nth-child(1) {
+    left: 10%;
+    width: 15px;
+    height: 15px;
+    animation-duration: 8s;
+}
+
+.bolhas span:nth-child(2) {
+    left: 25%;
+    width: 25px;
+    height: 25px;
+    animation-duration: 12s;
+}
+
+.bolhas span:nth-child(3) {
+    left: 40%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 9s;
+}
+
+.bolhas span:nth-child(4) {
+    left: 55%;
+    width: 18px;
+    height: 18px;
+    animation-duration: 11s;
+}
+
+.bolhas span:nth-child(5) {
+    left: 70%;
+    width: 22px;
+    height: 22px;
+    animation-duration: 7s;
+}
+
+.bolhas span:nth-child(6) {
+    left: 85%;
+    width: 16px;
+    height: 16px;
+    animation-duration: 10s;
+}
+
+.bolhas span:nth-child(7) {
+    left: 95%;
+    width: 24px;
+    height: 24px;
+    animation-duration: 13s;
+}
+
+
+/* ================= ANIMAÇÃO DAS BOLHAS ================= */
+
+@keyframes subir {
+
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+
+/* ======================== RODAPÉ =============================================== */
+
+.rodape {
     margin-top: 300px;
+
     background-color: #1c1c1c;
 
     width: 100%;
@@ -358,8 +551,7 @@ header h1 {
     box-sizing: border-box;
 }
 
-
-/* ================= TÍTULOS DO RODAPÉ ================= */
+/* TÍTULOS DO RODAPÉ */
 
 h4 {
     color: #00aaff;
@@ -369,8 +561,7 @@ h4 {
     font-size: 22px;
 }
 
-
-/* ================= RODAPÉ MODERNO ================= */
+/* RODAPÉ MODERNO */
 
 .rodape {
     background: linear-gradient(to top, #001f33, #003366);
@@ -440,8 +631,7 @@ h4 {
     transform: translateX(5px);
 }
 
-
-/* ================= BOTÕES SOCIAIS ================= */
+/* BOTÕES SOCIAIS */
 
 .insta-box {
     display: flex;
@@ -479,7 +669,7 @@ h4 {
     object-fit: contain;
 }
 
-/* ================= DETALHES FINAIS ================= */
+/* DETALHES FINAIS */
 
 .copy {
     text-align: center;
@@ -513,8 +703,7 @@ h4 {
     margin: 30px auto;
 }
 
-
-/* ================= FALE CONOSCO ================= */
+/* FALE CONOSCO */
 
 .questionario {
     flex: 1;
