@@ -32,11 +32,9 @@ body::before {
     width: 100%;
     height: 100%;
 
-    background-image: radial-gradient(
-        circle,
-        rgba(255,255,255,0.15) 2px,
-        transparent 2px
-    );
+    background-image: radial-gradient(circle,
+            rgba(255, 255, 255, 0.15) 2px,
+            transparent 2px);
 
     background-size: 60px 60px;
 
@@ -60,15 +58,15 @@ body::before {
 
     margin: 20px;
 
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
 
     backdrop-filter: blur(15px);
 
     border-radius: 20px;
 
-    border: 1px solid rgba(0,229,255,0.3);
+    border: 1px solid rgba(0, 229, 255, 0.3);
 
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 
     position: relative;
     z-index: 1;
@@ -147,8 +145,34 @@ body::before {
 
 /* ================= TÍTULOS ================= */
 
-h1,
-h2,
+h1 {
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    color: white;
+
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    font-family: 'Sora', sans-serif;
+
+    font-weight: 600;
+}
+h2 {
+    
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    color: white;
+
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    font-family: 'Sora', sans-serif;
+
+    font-weight: 600;
+}
 h3,
 h4 {
 
@@ -158,7 +182,7 @@ h4 {
 
     color: white;
 
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 
     font-family: 'Sora', sans-serif;
 
@@ -203,11 +227,11 @@ h1::after {
 
     border-radius: 20px;
 
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
 
     backdrop-filter: blur(10px);
 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 
     color: white;
 
@@ -222,10 +246,16 @@ h1::after {
 /* ================= APRESENTAÇÕES ================= */
 
 .apresentação1,
-.apresentação2,
-.apresentação3 {
-
+.apresentação2 {
     margin-bottom: 20px;
+
+    text-align: initial;
+    
+}
+.apresentação3,
+.apresentação4{
+ 
+   margin-bottom: 20px;
 }
 
 
@@ -353,9 +383,9 @@ h1::after {
 
     gap: 10px;
 
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
 
-    border: 1px solid rgba(0,229,255,0.3);
+    border: 1px solid rgba(0, 229, 255, 0.3);
 
     backdrop-filter: blur(10px);
 
@@ -375,11 +405,11 @@ h1::after {
 .insta-box:hover,
 .fale-box:hover {
 
-    background: rgba(0,229,255,0.2);
+    background: rgba(0, 229, 255, 0.2);
 
     transform: scale(1.05);
 
-    box-shadow: 0 0 15px rgba(0,229,255,0.5);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
 }
 
 
@@ -401,12 +431,10 @@ h1::after {
     width: 80%;
     height: 1px;
 
-    background: linear-gradient(
-        to right,
-        transparent,
-        #00e5ff,
-        transparent
-    );
+    background: linear-gradient(to right,
+            transparent,
+            #00e5ff,
+            transparent);
 
     margin: 30px auto;
 }
@@ -454,7 +482,7 @@ h1::after {
     width: 20px;
     height: 20px;
 
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.3);
 
     border-radius: 50%;
 
