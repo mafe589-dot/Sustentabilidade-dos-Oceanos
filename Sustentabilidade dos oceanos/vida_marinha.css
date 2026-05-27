@@ -21,6 +21,35 @@
     top: 1px;
 }
 
+/* ================= FUNDO ================= */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: radial-gradient(
+        circle,
+        rgba(255,255,255,0.15) 2px,
+        transparent 2px
+    );
+
+    background-size: 60px 60px;
+
+    opacity: 0.3;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
 /* ================= LOGO ================= */
 
 .logo {
